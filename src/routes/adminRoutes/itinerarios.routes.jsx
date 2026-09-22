@@ -2,8 +2,8 @@ import { Route } from "react-router-dom";
 
 import ProtectedRoute from "../ProtectedRoute";
 
-import Itinerarios from "../pages/admin/itinerarios/Itinerarios";
-import ItinerarioForm from "../pages/admin/itinerarios/ItinerarioForm";
+import Itinerarios from "../../pages/admin/itinerarios/Itinerarios";
+import ItinerarioForm from "../../pages/admin/itinerarios/ItinerarioForm";
 
 const ItinerarioRoutes = () => {
   return (

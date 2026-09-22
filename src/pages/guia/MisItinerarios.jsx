@@ -9,7 +9,7 @@ const MisItinerarios = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  const userId = localStorage.getItem("userId");
+  //const userId = localStorage.getItem("userId");
 
   useEffect(() => {
     cargarItinerarios();
@@ -17,10 +17,12 @@ const MisItinerarios = () => {
 
   const cargarItinerarios = async () => {
     try {
-      const res = await getMisItinerarios(userId);
+      // const res = await getMisItinerarios(userId);
+      const res = await getMisItinerarios();
 
       setItinerarios(res.data);
     } catch (err) {
+      console.error(err);
       setError("Error al cargar los itinerarios");
     } finally {
       setLoading(false);
@@ -49,6 +51,7 @@ const MisItinerarios = () => {
               <th>Itinerario</th>
               <th>Duracion</th>
               <th>Fecha Asignación</th>
+              <th>Hora Asignación</th>
             </tr>
           </thead>
 
@@ -61,11 +64,13 @@ const MisItinerarios = () => {
                   <td>{e.itinerario?.duracion}</td>
 
                   <td>{e.fecha?.split("T")[0]}</td>
+
+                  <td>{e.hora}</td>
                 </tr>
               ))
             ) : (
               <tr>
-                <td colSpan="3">No tenés itinerarios asignados</td>
+                <td colSpan="4">No tenés itinerarios asignados</td>
               </tr>
             )}
           </tbody>

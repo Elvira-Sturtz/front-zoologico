@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import { Form, Button, Table, Row, Col } from "react-bootstrap";
-import Layout from "../../components/Layout";
+import Layout from "../../../components/Layout";
 
-import { getEspecies } from "../../api/especies";
+import { getEspecies } from "../../../api/especies";
 import {
   crearAsignacion,
   getAsignaciones,
   deleteAsignacion,
-} from "../../api/asignaciones";
-import api from "../../api/axios"; // para cuidadores
+} from "../../../api/asignaciones";
+import api from "../../../api/axios"; // para cuidadores
 
 const AsignarCuidador = () => {
   const role = "admin";

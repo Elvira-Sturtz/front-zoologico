@@ -2,8 +2,8 @@ import { Route } from "react-router-dom";
 
 import ProtectedRoute from "../ProtectedRoute";
 
-import Zonas from "../pages/admin/zonas/Zonas";
-import ZonaForm from "../pages/admin/zonas/ZonaForm";
+import Zonas from "../../pages/admin/zonas/Zonas";
+import ZonaForm from "../../pages/admin/zonas/ZonaForm";
 
 const ZonaRoutes = () => {
   return (

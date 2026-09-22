@@ -45,56 +45,46 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-
   // LOGOUT
-  const logout = () => {
-   try {
-    //  setUser(null);
-    // localStorage.removeItem("user");
+  const logout = async () => {
+    try {
+      //  setUser(null);
+      // localStorage.removeItem("user");
 
-    await logoutRequest();
+      await logoutRequest();
 
       setUser(null);
 
       setIsAuthenticated(false);
-   } catch (error) {
-     console.log(error);
-   }
+    } catch (error) {
+      console.log(error);
+    }
   };
-
 
   // VERIFICAR SESIÓN
   useEffect(() => {
-
     const checkLogin = async () => {
-
       try {
-
         const res = await profileRequest();
 
         setUser(res.data);
 
         setIsAuthenticated(true);
-
       } catch (error) {
-
         setUser(null);
 
         setIsAuthenticated(false);
-
       } finally {
-
         setLoading(false);
-
       }
     };
 
     checkLogin();
-
   }, []);
   return (
-    <AuthContext.Provider value={{ user, login, logout, isAuthenticated,
-        loading }}>
+    <AuthContext.Provider
+      value={{ user, login, logout, isAuthenticated, loading }}
+    >
       {children}
     </AuthContext.Provider>
   );

@@ -2,8 +2,8 @@ import { Route } from "react-router-dom";
 
 import ProtectedRoute from "../ProtectedRoute";
 
-import Usuarios from "../pages/admin/usuarios/Usuarios";
-import UsuarioForm from "../pages/admin/usuarios/UsuarioForm";
+import Usuarios from "../../pages/admin/usuarios/Usuarios";
+import UsuarioForm from "../../pages/admin/usuarios/UsuarioForm";
 
 const UsuarioRoutes = () => {
   return (

@@ -1,7 +1,7 @@
 import { Route } from "react-router-dom";
 
-import Habitats from "../pages/admin/habitats/Habitats";
-import HabitatForm from "../pages/admin/habitats/HabitatForm";
+import Habitats from "../../pages/admin/habitats/Habitats";
+import HabitatForm from "../../pages/admin/habitats/HabitatForm";
 
 const HabitatRoutes = () => {
   return (

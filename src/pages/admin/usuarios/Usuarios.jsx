@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import { Table, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-import Layout from "../../components/Layout";
-import CustomToast from "../../components/CustomToast";
+import Layout from "../../../components/Layout";
+import CustomToast from "../../../components/CustomToast";
 
-import { getUsuarios, deleteUsuario } from "../../api/usuarios";
+import { getUsuarios, deleteUsuario } from "../../../api/usuarios";
 
 const Usuarios = () => {
   const [usuarios, setUsuarios] = useState([]);

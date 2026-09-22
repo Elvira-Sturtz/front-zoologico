@@ -11,3 +11,6 @@ export const deleteAsignacion = (id) => api.delete(`/asignaciones/${id}`);
 
 // especies del cuidador logueado
 export const getMisEspecies = (id) => api.get(`/asignaciones/cuidador/${id}`);
+
+// especies del guia logueado
+export const getMisItinerarios = (id) => api.get(`/asignaciones/guia/${id}`);

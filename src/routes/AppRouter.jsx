@@ -6,6 +6,8 @@ import Dashboard from "../pages/Dashboard";
 import MisItinerarios from "../pages/guia/MisItinerarios";
 import MisEspecies from "../pages/cuidador/MisEspecies";
 
+import AsignarCuidador from "../pages/admin/asignaciones/AsignarCuidador";
+
 import ProtectedRoute from "./ProtectedRoute";
 
 import EspeciesRoutes from "./adminRoutes/especies.routes";
@@ -23,7 +25,7 @@ const AppRouter = () => {
           element={<Login />}
         />
 
-        {/* Dashboard (todos logueados) */}
+        {/* Dashboard (todos logueados) Usuario Autenticado*/}
         <Route
           path="/dashboard"
           element={
@@ -33,12 +35,19 @@ const AppRouter = () => {
           }
         />
 
-        {/* ADMIN */}
+        {/* RUTAS DEL ADMIN */}
+        {EspeciesRoutes}
+        {HabitatRoutes}
+        {ZonaRoutes}
+        {ItinerarioRoutes}
+        {UsuarioRoutes}
+
+        {/* ADMIN 
         <EspeciesRoutes />
         <HabitatRoutes />
         <ZonaRoutes />
         <ItinerarioRoutes />
-        <UsuarioRoutes />
+        <UsuarioRoutes />*/}
 
         <Route
           path="/asignaciones"

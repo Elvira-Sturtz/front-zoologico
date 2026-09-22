@@ -3,10 +3,14 @@ import { Form, Button, Spinner } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useNavigate, useParams } from "react-router-dom";
 
-import Layout from "../../components/Layout";
-import CustomToast from "../../components/CustomToast";
+import Layout from "../../../components/Layout";
+import CustomToast from "../../../components/CustomToast";
 
-import { createUsuario, getUsuario, updateUsuario } from "../../api/usuarios";
+import {
+  createUsuario,
+  getUsuario,
+  updateUsuario,
+} from "../../../api/usuarios";
 
 const UsuarioForm = () => {
   const {
