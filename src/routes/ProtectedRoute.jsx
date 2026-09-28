@@ -20,7 +20,13 @@ const ProtectedRoute = ({ children, allowedRoles }) => {
       />
     );
   }*/
-  if (!user) return <Navigate to="/" />;
+  if (!user)
+    return (
+      <Navigate
+        to="/"
+        replace
+      />
+    );
 
   //  Rol no permitido
   /* if (allowedRoles && !allowedRoles.includes(role)) {
@@ -31,8 +37,13 @@ const ProtectedRoute = ({ children, allowedRoles }) => {
       />
     );
   }*/
-  if (allowedRoles && !allowedRoles.includes(user.role)) {
-    return <Navigate to="/dashboard" />;
+  if (allowedRoles && !allowedRoles.includes(user.rol)) {
+    return (
+      <Navigate
+        to="/dashboard"
+        replace
+      />
+    );
   }
 
   //  Permitido

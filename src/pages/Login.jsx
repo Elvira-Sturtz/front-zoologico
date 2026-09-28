@@ -40,7 +40,7 @@ const Login = () => {
       //const user = JSON.parse(localStorage.getItem("user"));
 
       if (user.rol === "admin") {
-        navigate("/dashboard");
+        navigate("/especies");
       } else if (user.rol === "guia") {
         navigate("/mis-itinerarios");
       } else if (user.rol === "cuidador") {

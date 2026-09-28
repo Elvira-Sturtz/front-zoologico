@@ -2,8 +2,12 @@
 import { Container, Row, Col } from "react-bootstrap";
 import NavbarApp from "./NavbarApp";
 import Sidebar from "./Sidebar";
+import { useAuth } from "../context/AuthContext";
 
-const Layout = ({ children, role }) => {
+const Layout = ({ children }) => {
+  const { user } = useAuth();
+  console.log("USUARIO:", user);
+
   return (
     <>
       <NavbarApp />
@@ -12,9 +16,9 @@ const Layout = ({ children, role }) => {
         <Row>
           <Col
             md={2}
-            className="bg-light vh-100 p-3"
+            className="bg-light  p-3"
           >
-            <Sidebar role={role} />
+            <Sidebar role={user?.rol} />
           </Col>
 
           <Col

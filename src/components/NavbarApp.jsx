@@ -16,15 +16,15 @@ const NavbarApp = () => {
         </Navbar.Brand>
 
         <Nav>
-          <Navbar.Link
+          <Nav.Link
             as={Link}
             to="/dashboard"
           >
             Zoo App
-          </Navbar.Link>
+          </Nav.Link>
           <Nav.Link
             as={Link}
-            to="/login"
+            to="/"
           >
             Cerrar sesión
           </Nav.Link>
