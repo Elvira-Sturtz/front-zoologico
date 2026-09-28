@@ -1,7 +1,16 @@
 import { Navbar, Container, Nav } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 
 const NavbarApp = () => {
+  const { logout } = useAuth();
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    await logout();
+    navigate("/");
+  };
+
   return (
     <Navbar
       bg="dark"
@@ -22,9 +31,11 @@ const NavbarApp = () => {
           >
             Zoo App
           </Nav.Link>
+
           <Nav.Link
-            as={Link}
-            to="/"
+            as="button"
+            onClick={handleLogout}
+            className="border-0 bg-transparent"
           >
             Cerrar sesión
           </Nav.Link>
