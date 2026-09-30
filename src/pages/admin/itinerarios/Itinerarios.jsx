@@ -38,7 +38,7 @@ const Itinerarios = () => {
         to="/itinerarios/nuevo"
         className="mb-3"
       >
-        Nueva Itinerario
+        Nuevo Itinerario
       </Button>
       <Table
         striped

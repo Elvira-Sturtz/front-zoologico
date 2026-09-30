@@ -124,6 +124,7 @@ import HabitatRoutes from "./adminRoutes/habitats.routes";
 import ZonaRoutes from "./adminRoutes/zonas.routes";
 import ItinerarioRoutes from "./adminRoutes/itinerarios.routes";
 import UsuarioRoutes from "./adminRoutes/usuarios.routes";
+import CuidadorRoutes from "./adminRoutes/cuidadores.routes";
 
 const AppRoutes = () => {
   const routes = [
@@ -145,6 +146,7 @@ const AppRoutes = () => {
     ...HabitatRoutes,
     ...ZonaRoutes,
     ...ItinerarioRoutes,
+    ...CuidadorRoutes,
     ...UsuarioRoutes,
 
     {
