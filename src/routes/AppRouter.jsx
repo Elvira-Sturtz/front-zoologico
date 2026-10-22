@@ -125,6 +125,7 @@ import ZonaRoutes from "./adminRoutes/zonas.routes";
 import ItinerarioRoutes from "./adminRoutes/itinerarios.routes";
 import UsuarioRoutes from "./adminRoutes/usuarios.routes";
 import CuidadorRoutes from "./adminRoutes/cuidadores.routes";
+import GuiaRoutes from "./adminRoutes/guias.routes";
 
 const AppRoutes = () => {
   const routes = [
@@ -148,6 +149,7 @@ const AppRoutes = () => {
     ...ItinerarioRoutes,
     ...CuidadorRoutes,
     ...UsuarioRoutes,
+    ...GuiaRoutes,
 
     {
       path: "/asignaciones",
