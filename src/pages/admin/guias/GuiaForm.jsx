@@ -18,8 +18,8 @@ const GuiaForm = () => {
     // setValue,
     formState: { errors, isSubmitting, isDirty },
     reset,
-    watch,
-  } = useForm({ mode: "onChange", defaultValues: { crearUsuario: "no" } });
+    
+  } = useForm({ mode: "onChange",  });
 
   const navigate = useNavigate();
   const params = useParams();
@@ -34,8 +34,7 @@ const GuiaForm = () => {
 
   const [toastVariant, setToastVariant] = useState("success");
 
-  // Saber si eligió crear usuario
-  const crearUsuario = watch("crearUsuario");
+  
 
   //  Aviso al cerrar pestaña o recargar
   useEffect(() => {
@@ -213,43 +212,16 @@ const GuiaForm = () => {
 
           {/* CREAR USUARIO */}
           {!params.id && (
-            <Form.Group className="mb-3">
-              <Form.Label>
-                ¿Crear una cuenta de usuario para este guía?
-              </Form.Label>
-              <div>
-                <Form.Check
-                  inline
-                  type="radio"
-                  label="Sí"
-                  value="si"
-                  {...register("crearUsuario", {
-                    required: "Debe seleccionar una opción",
-                  })}
-                />
-
-                <Form.Check
-                  inline
-                  type="radio"
-                  label="No"
-                  value="no"
-                  {...register("crearUsuario", {
-                    required: "Debe seleccionar una opción",
-                  })}
-                />
-              </div>
-
-              {errors.crearUsuario && (
-                <div className="text-danger">{errors.crearUsuario.message}</div>
-              )}
-            </Form.Group>
+            <div className="text-center mt-5 mb-4">
+    <h5 className="fw-bold m-0">Cuenta de usuario para este guía</h5>
+    <hr className="mt-3 mb-4" />
+  </div>
           )}
 
           {/* DATOS DEL USUARIO */}
-          {!params.id && crearUsuario === "si" && (
+          {!params.id  && (
             <>
-              <hr />
-
+             
               <h5 className="mb-3">Datos de acceso</h5>
 
               {/* USERNAME */}
@@ -261,9 +233,8 @@ const GuiaForm = () => {
                   placeholder="Nombre de usuario"
                   {...register("username", {
                     required:
-                      crearUsuario === "si"
-                        ? "El nombre de usuario es obligatorio"
-                        : false,
+                       "El nombre de usuario es obligatorio"
+                        ,
                   })}
                   isInvalid={errors.username}
                 />
@@ -282,7 +253,7 @@ const GuiaForm = () => {
                   placeholder="correo@ejemplo.com"
                   {...register("email", {
                     required:
-                      crearUsuario === "si" ? "El email es obligatorio" : false,
+                      "El email es obligatorio" ,
                   })}
                   isInvalid={errors.email}
                 />
@@ -301,9 +272,8 @@ const GuiaForm = () => {
                   placeholder="Contraseña"
                   {...register("password", {
                     required:
-                      crearUsuario === "si"
-                        ? "La contraseña es obligatoria"
-                        : false,
+                      "La contraseña es obligatoria"
+                        ,
                     minLength: {
                       value: 6,
                       message: "Mínimo 6 caracteres",
