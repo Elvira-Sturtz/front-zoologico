@@ -179,7 +179,7 @@ const GuiaForm = () => {
             <Form.Label>Telefono</Form.Label>
 
             <Form.Control
-              as="text"
+              type="text"
               placeholder="Teléfono del Guia"
               {...register("telefono", {
                 maxLength: {
@@ -199,7 +199,7 @@ const GuiaForm = () => {
             <Form.Label>Fecha de Ingreso</Form.Label>
 
             <Form.Control
-              as="date"
+              type="date"
               {...register("fechaIngreso", {
                 required: "La fecha de ingreso es obligatoria",
               })}

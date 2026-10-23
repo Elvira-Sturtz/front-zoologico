@@ -179,7 +179,7 @@ const CuidadorForm = () => {
             <Form.Label>Telefono</Form.Label>
 
             <Form.Control
-              as="text"
+              type="number"
               placeholder="Teléfono del Cuidador"
               {...register("telefono", {
                 maxLength: {
@@ -199,8 +199,8 @@ const CuidadorForm = () => {
             <Form.Label>Fecha de Ingreso</Form.Label>
 
             <Form.Control
-              as="date"
-              {...register("fechaIngreso", {
+              type="date"
+                          {...register("fechaIngreso", {
                 required: "La fecha de ingreso es obligatoria",
               })}
               isInvalid={errors.fechaIngreso}

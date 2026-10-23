@@ -100,7 +100,7 @@ const Cuidadores = () => {
               </td>
             </tr>
           ))}
-          cuidador{" "}
+          
         </tbody>
       </Table>
     </Layout>

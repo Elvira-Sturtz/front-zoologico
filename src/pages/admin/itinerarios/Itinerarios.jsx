@@ -81,7 +81,7 @@ const Itinerarios = () => {
               </td>
             </tr>
           ))}
-          itinerario{" "}
+         
         </tbody>
       </Table>
     </Layout>

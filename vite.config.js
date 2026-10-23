@@ -18,7 +18,7 @@ server:{
  host: true, //para que sea visible en la red local
  proxy: {
    '/api': {
-     target: 'http://172.16.2.142:4000' , //ip y puerto del back
+     target: 'http://172.16.2.129:4000' , //ip y puerto del back
      changeOrigin: true,
      secure: false
    }

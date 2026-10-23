@@ -38,7 +38,7 @@ const Habitats = () => {
         to="/habitats/nueva"
         className="mb-3"
       >
-        Nueva Habitat
+        Nuevo Habitat
       </Button>
       <Table
         striped
