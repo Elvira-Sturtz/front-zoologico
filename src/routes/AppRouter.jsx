@@ -115,7 +115,6 @@ import Dashboard from "../pages/Dashboard";
 import MisItinerarios from "../pages/guia/MisItinerarios";
 import MisEspecies from "../pages/cuidador/MisEspecies";
 
-import AsignarCuidador from "../pages/admin/asignaciones/AsignarCuidador";
 
 import ProtectedRoute from "./ProtectedRoute";
 
@@ -126,6 +125,8 @@ import ItinerarioRoutes from "./adminRoutes/itinerarios.routes";
 import UsuarioRoutes from "./adminRoutes/usuarios.routes";
 import CuidadorRoutes from "./adminRoutes/cuidadores.routes";
 import GuiaRoutes from "./adminRoutes/guias.routes";
+
+import AsignacionesRoutes from "./adminRoutes/asignaciones.routes";
 
 const AppRoutes = () => {
   const routes = [
@@ -150,15 +151,9 @@ const AppRoutes = () => {
     ...CuidadorRoutes,
     ...UsuarioRoutes,
     ...GuiaRoutes,
+    ...AsignacionesRoutes,
 
-    {
-      path: "/asignaciones",
-      element: (
-        <ProtectedRoute allowedRoles={["admin"]}>
-          <AsignarCuidador />
-        </ProtectedRoute>
-      ),
-    },
+    
 
     {
       path: "/mis-itinerarios",

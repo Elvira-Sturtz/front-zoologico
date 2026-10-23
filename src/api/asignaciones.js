@@ -1,13 +1,31 @@
 import api from "./axios";
 
+
+
+
+// Relación Cuidador - Especie
 // Crear asignación
-export const crearAsignacion = (data) => api.post("/asignaciones", data);
+export const crearAsignacionCuidador = (data) => api.post("/asignaciones-cuidadores", data);
 
 // Listar asignaciones
-export const getAsignaciones = () => api.get("/asignaciones");
+export const getAsignacionesCuidador = () => api.get("/asignaciones-cuidadores");
 
 // Eliminar asignación
-export const deleteAsignacion = (id) => api.delete(`/asignaciones/${id}`);
+export const deleteAsignacionCuidador = (id) => api.delete(`/asignaciones-cuidadores/${id}`);
+
+
+
+// Relación Guía - Itinerario
+// Crear asignación
+export const crearAsignacionGuia = (data) => api.post("/asignaciones-guias", data);
+
+// Listar asignaciones
+export const getAsignacionesGuia = () => api.get("/asignaciones-guias");
+
+// Eliminar asignación
+export const deleteAsignacionGuia = (id) => api.delete(`/asignaciones-guias/${id}`);
+
+
 
 // especies del cuidador logueado
 export const getMisEspecies = (id) => api.get(`/asignaciones/cuidador/${id}`);
